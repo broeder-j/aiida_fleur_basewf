@@ -253,7 +253,8 @@ class fleur_convergence(WorkChain):
         """
         run a FLEUR calculation
         """
-        
+        # check if calculation before is in FINISHED (not failed)
+        #check if inpgen was run before.
         self.change_fleurinp()
         fleurin = self.ctx.fleurinp
         '''
