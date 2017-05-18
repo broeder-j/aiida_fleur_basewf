@@ -1,0 +1,9 @@
+{
+    "fleur": {
+        "name": "aiida-fleur-basewf",
+        "entry_point": "fleur",
+        "pip_url": "git+https://github.com/broeder-j/aiida_fleur_basewf/#egg=aiida-fleur-basewf-0.27",
+        "plugin_info": "https://raw.github.com/broeder-j/aiida_fleur_basewf/master/setup.json",
+        "code_home": "www.flapw.de"
+    }
+        

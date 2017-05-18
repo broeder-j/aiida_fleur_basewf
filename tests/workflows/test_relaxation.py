@@ -9,13 +9,13 @@ from aiida.orm import load_node
 from aiida.workflows2.run import async, run
 from aiida.orm.calculation.job.fleur_inp.fleurinputgen import FleurinputgenCalculation
 from aiida.orm.calculation.job.fleur_inp.fleur import FleurCalculation
-from aiida.workflows2.defaults import registry
-from relaxation import fleur_relaxation
+from aiida.work.defaults import registry
+from fleur_workflows.relax import fleur_relax_wc
 
 StructureData = DataFactory('structure')
 ParameterData = DataFactory('parameter')
 KpointsData = DataFactory('array.kpoints')
-FleurinpData = DataFactory('fleurinp')
+FleurinpData = DataFactory('fleur.fleurinp')
 
 ###############################
 # Set your values here
@@ -41,4 +41,4 @@ parameters = load_node(13496)# Be 13496, W 13161
 wf_para = ParameterData(dict={'relax_runmax' : 5, 'density_criterion' : 0.0000001, 'max_force_cycle' : 9})
 
 
-res = run(fleur_relaxation, wf_parameters=wf_para, structure=s, calc_parameters=parameters, inpgen = code, fleur=code2)#, computer=computer)
+res = fleur_relax_wc.run(wf_parameters=wf_para, structure=s, calc_parameters=parameters, inpgen = code, fleur=code2)#, computer=computer)
