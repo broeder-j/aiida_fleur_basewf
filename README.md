@@ -1,6 +1,9 @@
 FLEUR AiiDA basic workflow
 ===================
-**Common workflows with the all-electron DFT [FLEUR code](http://www.flapw.de) using the [AiiDA framework](http://www.aiida.net)**  
+
+**REMARK: This repo is NOT anymore maintained, it has been MERGED into the 'aiida-fleur' repository: (https://github.com/broeder-j/aiida-fleur). We strongly recommend you use aiida-fleur instead!**
+
+Common workflows with the all-electron DFT [FLEUR code](http://www.flapw.de) using the [AiiDA framework](http://www.aiida.net)**  
 Developed at the Forschungszentrum Jülich GmbH  
 
 License:
